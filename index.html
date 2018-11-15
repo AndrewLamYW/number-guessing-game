@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Number guessing game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+                max-width: 480px;
+                margin: 0 auto;
+                font-family: sans-serif;
+                padding: 1em;
+            }
+
+            ul {
+                list-style-type: none;
+                display: flex;
+                padding: 0;
+                flex-wrap: wrap;
+            }
+
+            li {
+                background-color: #eee;
+                border: 1px solid white;
+                padding: .5em;
+                min-width: 1em;
+                min-height: 1em;
+                text-align: center;
+            }
+
+            #status {
+                background-color: antiquewhite;
+                border-radius: 1em;
+                padding: .8em 1.1em;
+                display: inline-block;
+            }
+        </style>
+    <script src="script.js" async></script>
+</head>
+
+<body>
+    <h1>Number guessing game</h1>
+    <p>We have selected a radom number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll
+        tell you if your guess was too high or too low.</p>
+
+    <form id="guessing-form">
+        <label for="user-input">Enter a guess:</label>
+        <input type="number" id="user-input" required min=1 max=100>
+        <input type="submit" value="Submit guess">
+    </form>
+
+    <p id="status">Start the game by submitting a number in the number field above.</p>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>
+</DOCTYPE>
