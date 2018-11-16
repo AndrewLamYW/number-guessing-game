@@ -1,5 +1,11 @@
-const form = document.forms.namedItem("guessing-form")
-const status = document.getElementById("status")
+const form = document.forms[0]
+const numberField = form.elements.item("user-input")
+const submitButton = form.elements[1]
+const resetButton = document.querySelector("#guessing-form input[type='reset']")
+const status = document.getElementById("status-message")
+const listItems = document.querySelectorAll("li")
+
+console.log(numberField)
 
 const randNum = Math.round((Math.random() * 100) + 1)
 
@@ -8,6 +14,27 @@ console.log("random number is: " + randNum)
 let round = 1;
 let userInput, li
 
+function disableInputs() {
+    numberField.disabled = true
+    submitButton.disabled = true
+}
+
+function enableInputs() {
+    numberField.disabled = false
+    submitButton.disabled = false
+}
+
+function clearListItemsContent() {
+    listItems.forEach(function (listItem) {
+        listItem.innerHTML = ""
+    })
+}
+
+function resetGame() {
+    enableInputs()
+    status.innerHTML = "Start the game by submitting a number in the number field above."
+    clearListItemsContent()
+}
 
 form.onsubmit = function (e) {
     // user can only submit if round is not more than 10
@@ -21,12 +48,12 @@ form.onsubmit = function (e) {
 
 
     if (userInput === randNum) {
-        status.textContent = "Bingo! You guessed correctly!"
+        status.textContent = "Yaaaassss! You guessed correctly!"
         disableInputs()
     } else if (userInput > randNum) {
-        status.innerHTML = "Your number is <strong>too high</strong>, try again."
+        status.innerHTML = "Noooooop, your number is <strong>too <sup>high</sup></strong>"
     } else if (userInput < randNum) {
-        status.innerHTML = "Your number is <strong>too low</strong>, try again."
+        status.innerHTML = "Noooooop, your number is <strong>too <sub>low</sub></strong>"
     } else {
         status.innerHTML = "Your number is out of range! Please enter between 1 to 100."
     }
@@ -37,8 +64,7 @@ form.onsubmit = function (e) {
         disableInputs()
     }
 
-    function disableInputs() {
-        numInput.disabled = true;
-        submitButton.disabled = true;
-    }
+
 }
+
+form.addEventListener("reset", resetGame)

@@ -1,0 +1,84 @@
+body {
+    padding: 1em;
+    margin: 0 auto;
+    font-family: 'Ranga', cursive;
+    font-size: 1.7em;
+    /* base font 27.2px */
+    text-align: center;
+    background-color: rgb(13, 12, 28);
+    color: white;
+}
+
+h1 {
+    font-family: 'Ranga', cursive;
+}
+
+#instruction {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    padding: 0.2em 0.65em;
+    text-align: center;
+    font: inherit;
+}
+
+label[for="user-input"] {
+    margin-right: .2em;
+}
+
+.input-wrapper {
+    display: inline-block;
+}
+
+#user-input {
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    color: rgb(13, 12, 28);
+}
+
+[type="submit"] {
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    background-color: rgb(52, 96, 141);
+    border-color: white;
+    color: white;
+}
+
+[type="reset"] {
+    color: white;
+    background-color: rgb(52, 96, 141);
+    display: block;
+    border-radius: 1em;
+    margin: 1em auto 0;
+}
+
+#status-message {
+    border-radius: 1em;
+    padding: .8em 1.2em;
+    display: inline-block;
+    background-color: white;
+    color: rgb(13, 12, 28);
+}
+
+#guess-history {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+}
+
+#guess-history li {
+    padding: .5em;
+    min-width: 1.5em;
+    min-height: 1.5em;
+    text-align: center;
+    background-color: white;
+    color: rgb(13, 12, 28);
+    border: 1px solid white;
+    margin: 0 16px 16px;
+    border-radius: 100%;
+}
