@@ -1,49 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta name="author" content="Andrew Lam">
-    <meta name="description" content="A number guessing game. Inspiration from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta name="author" content="Andrew Lam" />
+    <meta
+      name="description"
+      content="A number guessing game. Inspiration from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Number guessing game</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Ranga"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
 
     <script src="script.js" async></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Number guessing game</h1>
 
-    <p id="instruction">We have selected a radom number between 1 and 100. See if you can guess it in 10 turns or
-        fewer. We'll
-        tell you if your guess was too high or too low.</p>
+    <p id="instruction">
+      We have selected a radom number between 1 and 100. See if you can guess it
+      in 10 turns or fewer. We'll tell you if your guess was too high or too
+      low.
+    </p>
 
     <form>
-        <label for="user-input">Guess a number:</label>
-        <div class="input-wrapper">
-            <input type="number" id="user-input" required min=1 max=100><input type="submit" value="Submit">
-        </div>
-        <input type="reset" value="Play again">
+      <label for="user-input">Guess a number:</label>
+      <div class="inputs-wrapper">
+        <input type="number" id="user-input" required min="1" max="100" /><input
+          type="submit"
+          value="Submit"
+        />
+      </div>
+      <input type="reset" value="Play again" class="hidden" />
     </form>
 
-    <p id="status-message">Start the game by submitting a number in the number field above.</p>
+    <p id="status-message">
+      Start the game by submitting a number in the number field above.
+    </p>
 
     <ul id="guess-history">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+      <li><div class="ball bounce"/><div class="ball-number"/></li>
+      <li><div class="ball"/><div class="ball-number"/></li>
+      <li><div class="ball"/><div class="ball-number"/></li>
+      <li><div class="ball"/><div class="ball-number"/></li>
+      <li><div class="ball"/><div class="ball-number"/></li>
+      <li><div class="ball"/><div class="ball-number"/></li>
+      <li><div class="ball"/><div class="ball-number"/></li>
+      <li><div class="ball"/><div class="ball-number"/></li>
+      <li><div class="ball"/><div class="ball-number"/></li>
+      <li><div class="ball"/><div class="ball-number"/></li>
     </ul>
-</body>
-
+  </body>
 </html>
