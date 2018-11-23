@@ -1,6 +1,6 @@
 const form = document.forms[0]
 const inputsWrapper = document.getElementsByClassName("inputs-wrapper")[0]
-const numberField = form.elements.item("user-input")
+const numberField = form.elements.item("number-input")
 const submitButton = form.elements[1]
 const resetButton = document.querySelector("input[type='reset']")
 const status = document.getElementById("status-message")
